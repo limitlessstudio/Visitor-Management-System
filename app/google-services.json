@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1035252185617",
+    "project_id": "visitor-management-syste-abe4f",
+    "storage_bucket": "visitor-management-syste-abe4f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035252185617:android:dd83b419f03e1991460fb0",
+        "android_client_info": {
+          "package_name": "com.pegadaian.vms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035252185617-id0a7qlllk862h1690s3pc0frihdf75e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPPnShJz05qPgjLK0FhAZ_LF8Yo3kWltk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035252185617-id0a7qlllk862h1690s3pc0frihdf75e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

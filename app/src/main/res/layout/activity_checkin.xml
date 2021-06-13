@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:theme="@style/MatTheme">
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="-150dp"
+        android:layout_marginEnd="-100dp"
+        android:rotation="70"
+        android:src="@drawable/ic_bg" />
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-100dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="-150dp"
+        android:rotation="70"
+        android:src="@drawable/ic_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/imgBackCheckin"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:onClick="btnBackCheckin"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txtInput"
+            style="@style/Text50WTEB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgBackCheckin"
+            android:layout_marginTop="50dp"
+            android:text="Input\nData." />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtInput"
+            android:layout_marginTop="50dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:onClick="btnAmbilFoto"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            app:cardBackgroundColor="@color/colorWhite"
+                            app:cardCornerRadius="30dp"
+                            app:cardElevation="0dp">
+
+                            <ImageView
+                                android:id="@+id/imgAddFoto"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ic_foto"
+                                android:scaleType="centerCrop" />
+
+                            <ImageView
+                                android:id="@+id/imgAddQr"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:visibility="invisible" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/txtAmbil"
+                                style="@style/Text22WTSB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Ambil" />
+
+                            <TextView
+                                style="@style/Text22WTSB"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Foto" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Text15WTB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="28dp"
+                        android:text="Nama" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNama"
+                        style="@style/TilWT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNama"
+                            style="@style/Text15GRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/Text15WTB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Instansi" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilInstansi"
+                        style="@style/TilWT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etInstansi"
+                            style="@style/Text15GRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/Text15WTB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:text="No. Telp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilTelp"
+                        style="@style/TilWT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etTelp"
+                            style="@style/Text15GRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="number" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/Text15WTB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Email" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmailVis"
+                        style="@style/TilWT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmailVis"
+                            style="@style/Text15GRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/Text15WTB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Siapa yang anda temui ?" />
+
+                    <com.jaredrummler.materialspinner.MaterialSpinner
+                        android:id="@+id/spHost"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="7dp"
+                        android:fontFamily="@font/montserratbold"
+                        android:theme="@style/SpinHost" />
+
+                    <TextView
+                        style="@style/Text15WTB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="27dp"
+                        android:text="Tujuan" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilTujuan"
+                        style="@style/TilWT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etTujuan"
+                            style="@style/Text15GRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:gravity="top"
+                            android:inputType="textMultiLine" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/Text15WTB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Tap RFID !" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilRfid"
+                        style="@style/TilWT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRfid"
+                            style="@style/Text15GRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        style="@style/Text15GRB"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/bg_button"
+                        android:onClick="btnSimpan"
+                        android:text="Check In" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>

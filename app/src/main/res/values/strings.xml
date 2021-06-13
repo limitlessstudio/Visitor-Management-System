@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VMS</string>
+
+    <string name="forgot"><u>Forgot Password?</u></string>
+
+    <string name="about">VMS (Visitor Managament System) merupakan aplikasi yang dibuat untuk memudahkan perusahaan dalam melakukan pengelolaan data pengunjung."\n
+        \n"Data yang dikelola mulai dari data diri pengunjung, waktu checkin dan checkout, tujuan kunjungan dan orang yang ingin ditemui.
+    </string>
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="-150dp"
+        android:layout_marginEnd="-100dp"
+        android:rotation="70"
+        android:src="@drawable/ic_bg" />
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-100dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="-150dp"
+        android:rotation="70"
+        android:src="@drawable/ic_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/imgBackAbout"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txtVms"
+            style="@style/Text50WTEB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgBackAbout"
+            android:layout_marginTop="50dp"
+            android:text="VMS\nPegadaian." />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtVms"
+            android:layout_marginTop="50dp"
+            android:scrollbars="none">
+
+            <TextView
+                style="@style/Text15WTB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:justificationMode="inter_word"
+                android:paddingBottom="20dp"
+                android:text="@string/about" />
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/txtCopyright"
+            style="@style/Text12WTSB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="©" />
+    </RelativeLayout>
+
+</RelativeLayout>

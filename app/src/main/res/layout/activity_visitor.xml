@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="-150dp"
+        android:layout_marginEnd="-100dp"
+        android:rotation="70"
+        android:src="@drawable/ic_bg" />
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-100dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="-150dp"
+        android:rotation="70"
+        android:src="@drawable/ic_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/imgBackData"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:onClick="btnBackVis"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/imgFilter"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="20dp"
+            android:onClick="btnFilter"
+            android:padding="2dp"
+            android:src="@drawable/ic_filter" />
+
+        <TextView
+            android:id="@+id/txtVisitor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgBackData"
+            android:layout_marginTop="50dp"
+            android:text="Visitor\nData."
+            android:textAppearance="@style/Text50WTEB" />
+
+        <TextView
+            android:id="@+id/txtActiveDate"
+            style="@style/Text15ACB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtVisitor"
+            android:layout_marginStart="3dp"
+            android:text="-" />
+
+        <RelativeLayout
+            android:id="@+id/rlSearch"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_below="@id/txtVisitor"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_button"
+            android:backgroundTint="@color/colorWhite"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/etSearch"
+                style="@style/Text15GRB"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="40dp"
+                android:layout_toStartOf="@id/imgSearch"
+                android:background="@android:color/transparent"
+                android:hint="Search Data"
+                android:singleLine="true"
+                android:textColorHint="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/imgSearch"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorWhite"
+                android:padding="2dp"
+                android:src="@drawable/ic_search"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/imgClear"
+                android:layout_width="25dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="8dp"
+                android:onClick="btnClearVis"
+                android:padding="2dp"
+                android:src="@drawable/ic_cancel"
+                android:visibility="gone"
+                app:tint="@color/colorPrimary" />
+        </RelativeLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlSearch"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvVisitor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/lnOfflineData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_offline" />
+
+                <TextView
+                    style="@style/Text22ACB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="No Connection." />
+
+                <TextView
+                    style="@style/Text15WTSB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Check your internet connection\nand try again"
+                    android:textAlignment="center" />
+
+                <Button
+                    style="@style/Text15GRB"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/bg_button"
+                    android:backgroundTint="@color/colorWhite"
+                    android:onClick="btnCobaKoneksi"
+                    android:text="Coba Lagi" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnNoData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_nodata" />
+
+                <TextView
+                    style="@style/Text22ACB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Data not found." />
+
+                <TextView
+                    style="@style/Text15WTSB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Change search keyword or\nadd new visitor data"
+                    android:textAlignment="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="30dp"
+        android:background="@drawable/bg_button"
+        android:elevation="15dp"
+        android:onClick="btnPrint"
+        android:padding="15dp"
+        android:src="@drawable/ic_print"
+        app:elevation="10dp" />
+
+</RelativeLayout>

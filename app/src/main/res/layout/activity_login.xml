@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:theme="@style/MatTheme">
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="-150dp"
+        android:layout_marginEnd="-100dp"
+        android:rotation="70"
+        android:src="@drawable/ic_bg" />
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-100dp"
+        android:layout_marginEnd="105dp"
+        android:layout_marginBottom="-150dp"
+        android:rotation="70"
+        android:src="@drawable/ic_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/imgBackLogin"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:onClick="btnBackLogin"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/txtLogin"
+            style="@style/Text50WTEB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgBackLogin"
+            android:layout_marginTop="50dp"
+            android:text="Login\nAdmin." />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtLogin"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        style="@style/Text15WTB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:text="Email" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmailAdmin"
+                        style="@style/TilWT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmailAdmin"
+                            style="@style/Text15GRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="textEmailAddress" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/Text15WTB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="5dp"
+                        android:text="Password" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilPassAdmin"
+                        style="@style/TilWT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/colorPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etPassAdmin"
+                            style="@style/Text15GRB"
+                            android:layout_width="match_parent"
+                            android:layout_height="55dp"
+                            android:inputType="textPassword" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                        style="@style/Text15GRB"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/bg_button"
+                        android:onClick="btnLogin"
+                        android:text="Login" />
+                </LinearLayout>
+            </ScrollView>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/Text12WTSB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:onClick="btnForgot"
+            android:text="@string/forgot" />
+    </RelativeLayout>
+
+</RelativeLayout>

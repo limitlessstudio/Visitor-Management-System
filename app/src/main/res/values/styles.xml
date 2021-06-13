@@ -1,0 +1,150 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MatTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="DatePicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@android:color/transparent</item>
+
+        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="textAppearanceBody1">@style/Text15WTB</item>
+        <item name="android:textColorSecondary">@color/colorWhite</item>
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorPrimaryInverse">@color/colorWhite</item>
+        <item name="android:colorControlHighlight">@color/colorAccent</item>
+        <item name="android:colorControlActivated">@color/colorAccent</item>
+        <item name="android:windowBackground">@drawable/bg_calendar</item>
+        <item name="android:scrollbarSize">0dp</item>
+    </style>
+
+    <style name="Text50WTEB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratextrabold</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Text50ACEB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratextrabold</item>
+        <item name="android:textSize">50sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text22GRB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text22GRSB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratsemibold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text22WTEB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratextrabold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Text22WTB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Text22WTSB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratsemibold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Text22ACB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text15GRB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text15GRSB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratsemibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="Text15WTB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Text15WTSB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratsemibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Text15ACB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text12WTSB" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratsemibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="Text12B" parent="android:Widget.TextView">
+        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TilWT" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="errorEnabled">true</item>
+        <item name="errorTextAppearance">@style/Text12B</item>
+        <item name="errorTextColor">@color/colorError</item>
+        <item name="errorIconTint">@color/colorError</item>
+        <item name="boxBackgroundColor">@color/colorWhite</item>
+        <item name="boxStrokeColor">@color/colorAccent</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxStrokeErrorColor">@color/colorError</item>
+        <item name="boxCornerRadiusBottomEnd">30dp</item>
+        <item name="boxCornerRadiusBottomStart">30dp</item>
+        <item name="boxCornerRadiusTopEnd">30dp</item>
+        <item name="boxCornerRadiusTopStart">30dp</item>
+    </style>
+
+    <style name="SpinHost">
+        <item name="ms_arrow_tint">@color/colorPrimary</item>
+        <item name="ms_dropdown_max_height">300dp</item>
+        <item name="ms_text_color">@color/colorPrimary</item>
+        <item name="ms_hint">"-"</item>
+
+        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:scrollbarSize">0dp</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorIconTint">@color/colorError</item>
+    </style>
+
+</resources>
